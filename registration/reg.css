@@ -20,7 +20,7 @@ body {
     z-index: -1;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 20% 30%, #00f5ff88 0%, transparent 40%),
+    background: radial-gradient(circle at 20% 30%, #0088ff88 0%, transparent 40%),
                 radial-gradient(circle at 70% 60%, #e600ff88 0%, transparent 40%),
                 radial-gradient(circle at 40% 80%, #7400ff55 0%, transparent 40%);
     animation: moveGradient 15s infinite linear;
@@ -75,7 +75,7 @@ body {
   .logo-img {
     width: 40%;
     height: auto;
-    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.7)) drop-shadow(0 0 30px rgba(0, 255, 255, 0.3));
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.7)) drop-shadow(0 0 30px rgba(0, 255, 255, 0.3));
     transition: transform 0.3s ease, filter 0.3s ease;
     padding: 2px 105px;
   }
@@ -322,9 +322,10 @@ body {
     }
 
     #admin{
-        margin-top: 20px;
+        margin-top: 15px;
+        margin-bottom: 20px;
         width: 100%;
-        padding: 12px;
+        padding: 12px 20px 12px 20px;
         background: linear-gradient(to left, rgb(9, 148, 255), rgb(255, 0, 255));
         color: black;
         font-weight: bold;
@@ -332,4 +333,9 @@ body {
         border-radius: 8px;
         transition: transform 0.3s;
         box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+    #admin:hover {
+        transform: scale(1.05);
     }
