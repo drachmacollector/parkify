@@ -138,9 +138,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_slots'])) {
 
     #new_date{
       width: auto;
-      margin-top: 10px;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin: 10px 20px -2px 20px;
       flex: 1;
       padding: 10px;
       border-radius: 10px;
@@ -190,28 +188,43 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_slots'])) {
     }
     .btn2 {
       display: block;
-      width: 100px;
+      width: auto;
       margin: -2px auto;
       margin-bottom: 27px;
       padding: 14px;
-      background-color:rgb(0, 248, 132);
-      color: black;
+      background: linear-gradient(135deg, #56ab2f, #a8e063);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+      animation: pulse 2s infinite ease-in-out;
       font-size: 16px;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
       transition: background-color 0.3s;
       text-decoration: none;
     }
     .btn2:hover {
-      background-color:rgb(3, 78, 18);
-      color:white;
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(144, 238, 144, 0.6);
     }
 
     .btn:hover {
       background-color:rgb(10, 36, 53);
-      
     }
+    @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(144, 238, 144, 0.4);
+    }
+
+    70% {
+      box-shadow: 0 0 0 12px rgba(144, 238, 144, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(144, 238, 144, 0);
+    }
+  }
   </style>
 </head>
 <body>
@@ -229,7 +242,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_slots'])) {
             <br>
             <div id="date"><input type="date" id="new_date" name="new_date" required></div>
             <br>
-            <input  class="btn2" type="submit" name="add_slots" value="Add Slots">
+            <button type="submit" class="btn2" name="add_slots">➕ Add Slots</button>
     </form>
 </div>
 
