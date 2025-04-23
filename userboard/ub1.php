@@ -241,6 +241,7 @@ if (isset($_SESSION['user_id'])) {
   <p style="color: #ccc;">(Customize your experience...)</p>
   <a href="edit_profile.php" style="
     display: inline-block;
+    margin: 150px 182px 0px 0px;
     padding: 10px 20px;
     background-color: #3498db;
     color: white;

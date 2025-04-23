@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     form input {
-        width: 100%;
+        width: 96%;
         padding: 10px;
         background: linear-gradient(to left, rgba(9, 148, 255, 0.15), rgba(255, 0, 255, 0.15));
         color: white;
