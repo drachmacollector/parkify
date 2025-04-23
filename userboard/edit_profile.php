@@ -58,57 +58,70 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         overflow-x: hidden;
         position: relative;
         }
-
-
         .form-box {
-            max-width: 400px;
-            background-color: white;
-            padding: 30px;
-            margin: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        width: 500px;
+        padding: 30px 40px;
+        margin-top: 20px;
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+        display: flex;
+        flex-direction: column;
+        /* text-align: center; */
+        margin-left: 33%;
+    }
+            /* === FORM STYLES === */
+    form label {
+        font-family: 'bahnschrift semibold', Times, serif;
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        margin: 10px 0 8px;
+        /* margin-left: -423px; */
+    }
 
-        .form-box h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
+    form input {
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(to left, rgba(9, 148, 255, 0.15), rgba(255, 0, 255, 0.15));
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        /* cursor: pointer; */
+    }
 
-        label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: block;
-        }
+    form button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(to left, rgb(9, 148, 255), rgb(255, 0, 255));
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        transition: transform 0.3s;
+        box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    }
 
-        input[type="text"], 
-        input[type="email"], 
-        input[type="phone"], 
-        input[type="carNumber"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    form button:hover {
+        transform: scale(1.05);
+    }
 
-        input[type="submit"] {
-            background-color: #27ae60;
-            color: white;
-            border: none;
-            padding: 12px;
-            width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    /* === LINKS & SIGNUP SECTION === */
+    form a {
+        color: #00eaff;
+        font-weight: 500;
+        text-decoration: none;
+    }
 
-        input[type="submit"]:hover {
-            background-color: #219150;
-        }
-
-        .form-box .input-field {
-            margin-bottom: 15px;
-        }
+    #submit {
+        cursor: pointer;
+        background: linear-gradient(to left, rgb(9, 148, 255), rgb(255, 0, 255));
+        margin-top: 20px;
+    }
         #particles {
         position: fixed;
         top: 0;
@@ -118,6 +131,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         height: 100%;
         pointer-events: none;
         }
+    h2{
+        text-align: center;
+    } 
     </style>
 </head>
 <body>
@@ -136,7 +152,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
 
         <div class="input-field">
-            <label for="firstName">First Name:</label>
+            <label for="firstName">  First Name:</label>
             <input type="text" id="firstName" name="firstName" value="<?= $user['firstName'] ?>" required>
         </div>
 
@@ -164,8 +180,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <label for="carNumber">Car Number:</label>
             <input type="text" id="carNumber" name="carNumber" value="<?= $user['carNumber'] ?>" required>
         </div>
-
-        <input type="submit" value="Update Profile">
+        <br><br>
+        <input type="submit" id="submit" value="Update Profile">
     </form>
 </div>
 <canvas id="particles"></canvas>
