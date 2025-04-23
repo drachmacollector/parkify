@@ -11,8 +11,7 @@
 
 <body>
 <a href="admin_panel.php" style="display: inline-block; margin-bottom: 20px; text-decoration: none;">
-  <button style="padding: 10px 20px; font-size: 16px; background-color: #3498db; color: white; border: none; 
-    border-radius: 5px; cursor: pointer;">
+  <button id="goback">
     ← Back to Admin Panel
   </button>
 </a>
@@ -27,7 +26,7 @@
     <input type="number" name="available_slots" placeholder="Available Slots" required />
     <input type="hidden" name="lat" />
     <input type="hidden" name="lon" />
-    <button type="submit">➕ Add Parking Spot</button>
+    <button type="submit" id="add">➕ Add Parking Spot</button>
   </form>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
