@@ -200,7 +200,7 @@ if (isset($_SESSION['user_id'])) {
     <div class="center-wrapper">
     <img src="logo.png" class="logo-img" alt="Parkify Logo" />
       <p class="brand-subtext">Smart, Effortless & Secure Parking, Anytime</p>
-      <a href="../experiment_with_user/userboard.html" class="map-button">Find a Parking Spot</a>
+      <a target="_blank" href="../experiment_with_user/userboard.html" class="map-button">Find a Parking Spot</a>
     </div>
   </div>
 
@@ -228,11 +228,11 @@ if (isset($_SESSION['user_id'])) {
   <h2 style="color: #fff;">ABOUT US</h2>
   <h3>OUR TEAM :</h3>
   <u>
-  <a href="www.linkedin.com/in/lakshuki-hatwar-a80090324/">Lakshuki Hatwar ↗️</a> <br>
-  <a href="www.linkedin.com/in/siddhi-dhoke-53b7b432b/">Siddhi Dhoke ↗️</a> <br>
-  <a href="www.linkedin.com/in/nakul-bhadade">Nakul Bhadade ↗️</a> <br>
-  <a href="www.linkedin.com/in/ness-dubey-461496326/">Ness Dubey ↗️</a> <br>
-  <a href="www.linkedin.com/in/pranjal-baghel-b4aa8a283/">Pranjal Baghel ↗️</a> <br>
+  <a target="_blank" href="https://www.linkedin.com/in/lakshuki-hatwar-a80090324/">Lakshuki Hatwar ↗️</a> <br>
+  <a target="_blank" href="https://www.linkedin.com/in/siddhi-dhoke-53b7b432b/">Siddhi Dhoke ↗️</a> <br>
+  <a target="_blank" href="https://www.linkedin.com/in/nakul-bhadade">Nakul Bhadade ↗️</a> <br>
+  <a target="_blank" href="https://www.linkedin.com/in/ness-dubey-461496326/">Ness Dubey ↗️</a> <br>
+  <a target="_blank" href="https://www.linkedin.com/in/pranjal-baghel-b4aa8a283/">Pranjal Baghel ↗️</a> <br>
   </u>
 </div>
 

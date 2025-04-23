@@ -234,7 +234,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_slots'])) {
 </div>
 
       <a href="all_users.php" class="btn">All Users</a>
-      <a href="admin.php" class="btn">Add Parking Slot</a>
+      <a href="admin.php" class="btn">Add Parking Spot</a>
       <a href="booking_history.php" class="btn">Show Booking History</a>
       <a href="statistics.php" class="btn">Statistics</a>
     </div>
