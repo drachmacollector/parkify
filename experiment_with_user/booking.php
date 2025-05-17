@@ -128,61 +128,95 @@ $conn->close();
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Booking Page - Parkify</title>
+  <title>Booking Confirmation - Parkify</title>
   <link rel="stylesheet" href="booking.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bahnschrift&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Michroma&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <div class="session-info">
-      🚘 Logged in as: <strong><?php echo htmlspecialchars($username); ?></strong>
+  <!-- Background Elements -->
+  <canvas id="particles"></canvas>
+  <div class="animated-bg"></div>
+  <div class="grid-lines"></div>
+
+  <div class="booking-container">
+    <div class="user-status">
+      <i class="fas fa-user-astronaut"></i>
+      <span>SESSION ACTIVE: <strong><?php echo htmlspecialchars($username); ?></strong></span>
     </div>
 
-    <div class="glass-card">
-      <h2>Book Your Parking Slot</h2>
+    <div class="cyber-card">
+      <div class="card-header">
+        <h2><i class="fas fa-parking"></i> BOOKING CONFIRMATION</h2>
+        <div class="card-glow"></div>
+      </div>
 
-      <form method="POST" action="invoice.php">
-        <label>Username:</label>
-        <input type="text" name="username" value="<?= htmlspecialchars($username) ?>" readonly>
+      <form method="POST" action="invoice.php" class="cyber-form">
+        <div class="form-grid">
+          <div class="input-group">
+            <label><i class="fas fa-user"></i> USERNAME</label>
+            <input type="text" name="username" value="<?= htmlspecialchars($username) ?>" readonly>
+          </div>
 
-        <label>Full Name:</label>
-        <input type="text" name="fullname" value="<?= htmlspecialchars($fullName) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-id-card"></i> FULL NAME</label>
+            <input type="text" name="fullname" value="<?= htmlspecialchars($fullName) ?>" readonly>
+          </div>
 
-        <label>Email:</label>
-        <input type="text" name="email" value="<?= htmlspecialchars($email) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-envelope"></i> EMAIL</label>
+            <input type="text" name="email" value="<?= htmlspecialchars($email) ?>" readonly>
+          </div>
 
-        <label>Phone:</label>
-        <input type="text" name="phone" value="<?= htmlspecialchars($phone) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-phone"></i> PHONE</label>
+            <input type="text" name="phone" value="<?= htmlspecialchars($phone) ?>" readonly>
+          </div>
 
-        <label>Car Number:</label>
-        <input type="text" name="car_number" value="<?= htmlspecialchars($carNumber) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-car"></i> CAR NUMBER</label>
+            <input type="text" name="car_number" value="<?= htmlspecialchars($carNumber) ?>" readonly>
+          </div>
 
-        <label>Parking Spot:</label>
-        <input type="text" name="parking_name" value="<?= htmlspecialchars($parkingName) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-map-marker-alt"></i> PARKING SPOT</label>
+            <input type="text" name="parking_name" value="<?= htmlspecialchars($parkingName) ?>" readonly>
+          </div>
 
-        <label>Area:</label>
-        <input type="text" name="area" value="<?= htmlspecialchars($area) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-location-dot"></i> AREA</label>
+            <input type="text" name="area" value="<?= htmlspecialchars($area) ?>" readonly>
+          </div>
 
-        <label>City:</label>
-        <input type="text" name="city" value="<?= htmlspecialchars($city) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-city"></i> CITY</label>
+            <input type="text" name="city" value="<?= htmlspecialchars($city) ?>" readonly>
+          </div>
 
-        <label>Slot Number:</label>
-        <input type="text" name="slot" value="<?= htmlspecialchars($slot) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-hashtag"></i> SLOT NUMBER</label>
+            <input type="text" name="slot" value="<?= htmlspecialchars($slot) ?>" readonly>
+          </div>
 
-        <label>Time Slot:</label>
-        <input type="text" name="time_slot_text" value="<?= htmlspecialchars($timeSlotText) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-clock"></i> TIME SLOT</label>
+            <input type="text" name="time_slot_text" value="<?= htmlspecialchars($timeSlotText) ?>" readonly>
+          </div>
 
-        <label>Booking Date:</label>
-        <input type="text" name="date" value="<?= htmlspecialchars($date) ?>" readonly>
+          <div class="input-group">
+            <label><i class="fas fa-calendar-day"></i> BOOKING DATE</label>
+            <input type="text" name="date" value="<?= htmlspecialchars($date) ?>" readonly>
+          </div>
+        </div>
 
-        
-
-        <button type="submit">✅ Confirm Booking</button>
+        <button type="submit" class="cyber-button">
+          <span class="button-text"><i class="fas fa-check-circle"></i> CONFIRM BOOKING</span>
+          <span class="button-glitch"></span>
+        </button>
       </form>
     </div>
   </div>
-  <canvas id="particles"></canvas>
-    <div class="animated-bg"></div>
-<script src="particles.js"></script>
+
+  <script src="particles.js"></script>
 </body>
 </html>
