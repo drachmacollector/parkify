@@ -71,6 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       padding: 40px 30px;
       width: 320px;
       color: white;
+      text-align: center;
     }
 
     h2 {
@@ -101,14 +102,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       color: #fff;
       border: none;
       padding: 12px;
+      margin-bottom: 20px;
       border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
-      width: 100%;
+      width: 80%;
       transition: 0.3s;
     }
 
     input[type="submit"]:hover {
+      background: linear-gradient(145deg, #e600ff, #00f5ff);
+      transform: scale(1.03);
+    }
+    input[type="button"] {
+      background: linear-gradient(145deg, #00f5ff, #e600ff);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 80%;
+      transition: 0.3s;
+    }
+
+    input[type="button"]:hover {
       background: linear-gradient(145deg, #e600ff, #00f5ff);
       transform: scale(1.03);
     }
@@ -131,7 +149,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <form method="POST">
     <input type="text" name="admin" placeholder="Admin username" required>
     <input type="password" name="password" placeholder="Password" required>
-    <input type="submit" value="Go">
+    <input type="submit" value="Login">
+    <a href="../load/loading.php"><input type="button" value="Back to Main Page"></a>
   </form>
   <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
 </div>

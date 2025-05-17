@@ -12,71 +12,83 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Michroma&display=swap" rel="stylesheet">
- 
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Michroma&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="SPARKY"
-  agent-id="15538dd3-8130-4a97-a1dc-26b4854c4880"
-  language-code="en"
-></df-messenger>
-<div class="animated-bg"></div>
 
-  <div class="top">
-    <header class="hero">
-      <!-- <div class="brand">
-        <i class="fa-solid fa-car-side car-icon"></i>
-        <h1 class="hero-title">Parkify</h1>
-      </div>
-      <p class="hero-subtitle">Smart, Effortless & Secure Parking, Anytime</p> -->
-      <div class="logo-container">
-    <img src="logo.png" class="logo-img" alt="Parkify Logo" />
-  </div>
-    </header>
-    
-  </div>
-  <div class="car-radar-container">
-    <span class="radar-ping"></span>
-    
-  </div>
   
-
-  <form action="ifok.php" method="POST">
-    <div class="box">
-      <label for="userName">USERNAME:</label>
-      <input type="text" name="userName" id="userName" placeholder="Enter Username" />
-
-      <br /><br /><br />
-
-      <label for="password">PASSWORD:</label>
-      <input type="password" name="password" id="password" placeholder="Enter Password"/>
-
-      <p><a href="..\forgetpassword page\fg.php">Forgot Password?</a></p>
-
-      <button id="submit">SUBMIT</button>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="SPARKY"
+    agent-id="15538dd3-8130-4a97-a1dc-26b4854c4880"
+    language-code="en"
+  ></df-messenger>
+  
+    <div class="top">
+      <header class="hero">
+        <div class="logo-container">
+          <img src="logo.png" class="logo-img" alt="Parkify Logo" />
+          <div class="logo-glow"></div>
+          <div class="logo-pulse"></div>
+        </div>
+        <h2 class="hero-subtitle">SMART, EFFORTLESS & SECURE PARKING, ANYTIME</h2>
+      </header>
     </div>
+    
+    <form action="ifok.php" method="POST" class="login-form">
+      <div class="form-container">
+        <div class="input-group">
+          <input type="text" name="userName" id="userName" required />
+          <label for="userName">USERNAME</label>
+          <div class="input-highlight"></div>
+        </div>
+        
+        <div class="input-group">
+          <input type="password" name="password" id="password" required />
+          <label for="password">PASSWORD</label>
+          <div class="input-highlight"></div>
+        </div>
+        
+        <p class="forgot-password"><a href="..\forgetpassword page\fg.php">Forgot Password?</a></p>
+        
+        <button id="submit" class="cyber-button">
+          <span class="cyber-button-text">SUBMIT</span>
+          <span class="cyber-button-glitch"></span>
+        </button>
+      </div>
+      
+      <div class="signup-section">
+        <p class="signup">
+          <span class="new">NEW USER?</span>
+          <a href="..\userName\userName.php" class="signup-link">SIGN UP HERE</a>
+        </p>
+        
+        <span class="or">OR LOGIN USING</span>
+        
+        <div class="social-icons">
+          <a href="https://google.com/" target="_blank" class="social-icon"><i class="fa-brands fa-google"></i></a>
+          <a href="https://facebook.com/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://apple.com/" target="_blank" class="social-icon"><i class="fa-brands fa-apple"></i></a>
+        </div>
+      </div>
+    </form>
+    
+    <a href="../admin/admin_login.php" class="admin-button">
+      <button id="admin" class="cyber-button small">
+        <span class="cyber-button-text">ADMIN</span>
+      </button>
+    </a>
 
-    <p class="signup">
-      <span class="new">New User?</span>
-      <a href="..\userName\userName.php" class="signup-link">Sign Up Here</a>
-      <br />
-
-    </p>
-    <span class="or">Or login using</span>
-    <div class="icon">
-      <a href="https://google.com/" target="_blank"><i class="fa-brands fa-google" id="google"></i></a>
-      <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook" id="facebook"></i></a>
-      <a href="https://apple.com/" target="_blank"><i class="fa-brands fa-apple" id="apple"></i></a>
-    </div>
- 
-  </form>
-  <a href="../admin/admin_login.php " style=" text-decoration: none;"><button id="admin">ADMIN</button></a>
-
+  
+  <div class="corner-decoration top-left"></div>
+  <div class="corner-decoration top-right"></div>
+  <div class="corner-decoration bottom-left"></div>
+  <div class="corner-decoration bottom-right"></div>
+  
+    <!-- Canvas background moved to top of body -->
   <canvas id="particles"></canvas>
   <script src="particles.js"></script>
-
+  <script src="animations.js"></script>
 </body>
 </html>
