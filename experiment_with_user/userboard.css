@@ -64,7 +64,7 @@ body {
 
 /* === MAIN CONTAINER === */
 .parkify-container {
-  width: 100%;
+  width: 95%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 20px;
@@ -74,15 +74,17 @@ body {
 
 /* === GLASSMORPHIC SEARCH PANEL === */
 .search-glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
-              inset 0 0 10px rgba(0, 234, 255, 0.2),
-              0 0 20px rgba(0, 234, 255, 0.1);
-  border: 1px solid rgba(0, 234, 255, 0.1);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 80%;
+    justify-self: center;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
+                inset 0 0 10px rgba(0, 234, 255, 0.2), 
+                0 0 20px rgba(0, 234, 255, 0.1);
+    border: 1px solid rgba(0, 234, 255, 0.1);
 }
 .scan{
   text-align: center;
@@ -204,7 +206,7 @@ body {
 
 /* === CYBER MAP === */
 .cyber-map {
-  height: 60vh;
+  height: 55vh;
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);

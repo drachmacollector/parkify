@@ -148,7 +148,6 @@ if (isset($_SESSION['user_id'])) {
         <div class="cta-container">
           <a href="../experiment_with_user/userboard.html" class="cyber-button primary">
             <span class="button-text">FIND A PARKING SPOT</span>
-            <span class="button-glitch"></span>
             <span class="button-scanline"></span>
           </a>
 

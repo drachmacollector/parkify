@@ -170,6 +170,21 @@
     }
 
     loadParkingSpots();
+
+    document.getElementById("datePicker").addEventListener("change", function () {
+  const selectedDate = new Date(this.value);
+  const today = new Date();
+  
+  // Zero out time for accurate comparison
+  selectedDate.setHours(0, 0, 0, 0);
+  today.setHours(0, 0, 0, 0);
+
+  if (selectedDate < today) {
+    alert("❌ Invalid date selected. Please choose today or a future date.");
+    this.value = ""; // Reset invalid input
+  }
+});
+
   </script>
 </body>
 </html>

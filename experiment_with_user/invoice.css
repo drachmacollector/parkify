@@ -1,175 +1,304 @@
+/* === BASE STYLES === */
+:root {
+  --primary: #4a00e0;
+  --secondary: #8e2de2;
+  --accent: #00f5ff;
+  --dark-bg: #0a0a1a;
+  --darker-bg: #050510;
+  --text-light: #ffffff;
+  --text-muted: #cccccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    font-family: 'Bahnschrift', sans-serif;
-    background: #000;
-    overflow: auto;
-    position: relative;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
+/* === BACKGROUND EFFECTS === */
 .animated-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 20% 30%, #00f5ff88 0%, transparent 40%),
-        radial-gradient(circle at 70% 60%, #e600ff88 0%, transparent 40%),
-        radial-gradient(circle at 40% 80%, #7400ff55 0%, transparent 40%);
-    animation: moveGradient 15s infinite linear;
-    filter: blur(100px);
-    opacity: 0.7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg));
 }
 
-@keyframes moveGradient {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    50% {
-        transform: translate(-25%, -25%) scale(1.2);
-    }
-
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-}
-.buttons{
-    align-items: center;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-}
 #particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
 }
 
-.invoice-box {
-    width: 30%;
-    margin: 35px auto;
-    background: rgba(152, 41, 221, 0.08);
-    padding: 30px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 25px rgba(160, 32, 240, 0.15);
-    backdrop-filter: blur(10px);
-    text-align: center;
+/* === INVOICE CONTAINER === */
+.invoice-container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* === HEADER === */
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 30px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
-    max-width: 250px;
-    margin-bottom: -25px;
-    margin-left: 12px;
+  height: 7rem;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
 }
 
-h1 {
-    font-family: Centaur;
-    font-size: 40px;
-    color: #f4ecff;
-    margin-bottom: 18px;
-    text-shadow: 0 0 6px #a020f0;
-    letter-spacing: 0.75px;
+.invoice-title h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 5px;
 }
 
-.details p {
-    font-size: 19px;
-    color: #d7f2ff;
-    line-height: 1.4;
-    margin: 4px 0;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
-    padding-bottom: 4px;
+.invoice-title p {
+  font-size: 12px;
+  color: var(--text-muted);
 }
 
-.label {
-    font-weight: 600;
-    color: #cc99ff;
-    display: block;
-    font-size: 22px;
+.invoice-meta {
+  text-align: right;
+  color: white;
+  font-size: 14px;
+}
+
+.invoice-meta p {
+  margin-bottom: 5px;
+}
+
+/* === DIVIDER === */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  margin: 0 30px;
+}
+
+/* === BODY === */
+.invoice-body {
+  padding: 30px;
+}
+
+.client-info, .booking-details, .payment-summary {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 i {
+  font-size: 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.details-table, .payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.details-table th, 
+.details-table td, 
+.payment-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details-table th {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  color: var(--accent);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.payment-table {
+  width: 60%;
+  min-width: 300px;
+}
+
+.total-row {
+  background: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.total-row td {
+  border-bottom: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* === QR SECTION === */
+.qr-section {
+  text-align: center;
+  margin: 10px 0;
 }
 
 .qr-code {
-    margin-top: 20px;
-    width: 120px;
-    height: 120px;
+  width: 150px;
+  height: 150px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.qr-section p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* === FOOTER === */
+.invoice-footer {
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.print-btn, .home-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
 }
 
 .print-btn {
-    margin-top: 18px;
-    padding: 10px 22px;
-    background: linear-gradient(135deg, #8e2de2, #4a00e0);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(160, 32, 240, 0.3);
-    transition: background 0.3s ease, transform 0.2s;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: white;
 }
 
-.print-btn:hover {
-    background: linear-gradient(135deg, #a649f3, #5e2dff);
-    transform: scale(1.05);
-}
-.details {
-    text-align: left;
-    margin-top: 20px;
+.home-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  text-decoration: none;
 }
 
-.detail-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    color: #d7f2ff;
-    margin: 10px 0;
-    padding-bottom: 4px;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+.print-btn:hover, .home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.detail-row .label {
-    font-weight: 600;
-    color: #cc99ff;
-    font-size: 18px;
-    width: 140px;
-    flex-shrink: 0;
+.footer-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* === CONGRATS BANNER === */
 #congratsText {
-    width: 760px;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 38.4px;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px 40px;
-    border-radius: 15px;
-    border: 2px solid #00ffff;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: max-content;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: white;
+  /* background: linear-gradient(to right, var(--primary), var(--secondary));
+  padding: 15px 40px; */
+      background: rgba(0, 0, 0, 0.7);
+    padding: 25px 45px;
+        border: 2px solid #00ffff;
     text-shadow: 0 0 10px #0ff;
-    z-index: 9999;
-    display: none;
-    /* animation: flash 0.5s ease-in-out infinite alternate; */
+  border-radius: 50px;
+  z-index: 9999;
+  display: none;
+  box-shadow: 0 5px 30px rgba(74, 0, 224, 0.5);
+}
+
+#congratsText i {
+  margin-left: 10px;
+  color: #00ff88;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .invoice-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
   
-  @keyframes flash {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0.5;
-    }
+  .invoice-meta {
+    text-align: left;
   }
   
+  .payment-table {
+    width: 100%;
+  }
+  
+  .footer-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #congratsText {
+    font-size: 18px;
+    width: 90%;
+    text-align: center;
+  }
+}
