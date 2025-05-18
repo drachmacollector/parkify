@@ -1,14 +1,17 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "parkify";
+$host = "sql105.infinityfree.com";
+$user = "if0_39017725";
+$pass = "your_actual_vpanel_password"; // Use your InfinityFree account password
+$db   = "if0_39017725_parkify_db";
+
 
 // Connect to DB
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli("sql105.infinityfree.com", "if0_39017725", "jeZyqYSlUAhhmM", "if0_39017725_parkify_db");
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
 
 // Get form data
 $username = $_POST['Username'];
