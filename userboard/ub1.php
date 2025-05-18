@@ -51,7 +51,7 @@ if (isset($_SESSION['user_id'])) {
 
     while ($stmt->fetch()) {
       $booking_history_html .= "
-              <div style='margin-bottom: 10px; color: #ccc;'>
+              <div style='margin-bottom: 10px; color: #ffffff;'>
                 <strong>Date:</strong> $booking_date<br>
                 <strong>Time:</strong> $booking_time<br>
                 <strong>Slot:</strong> $slot_number<br>
@@ -62,7 +62,7 @@ if (isset($_SESSION['user_id'])) {
     }
 
     if (empty($booking_history_html)) {
-      $booking_history_html = "<p style='color: #ccc;'>No bookings found.</p>";
+      $booking_history_html = "<p style='color: #ffffff;'>No bookings found.</p>";
     }
 
     $stmt->close();
@@ -168,20 +168,20 @@ if (isset($_SESSION['user_id'])) {
 
     <div class="panel-content">
       <div id="panelContentPersonal" class="panel-tab">
-        <p style="color: #ccc;"><strong>Name:</strong> <?php echo $user_data['name']; ?></p>
-        <p style="color: #ccc;"><strong>Email:</strong> <?php echo $user_data['email']; ?></p>
-        <p style="color: #ccc;"><strong>Username:</strong> <?php echo $user_data['username']; ?></p>
-        <p style="color: #ccc;"><strong>Phone No:</strong> <?php echo $user_data['phoneNo']; ?></p>
-        <p style="color: #ccc;"><strong>State:</strong> <?php echo $user_data['state']; ?></p>
-        <p style="color: #ccc;"><strong>City:</strong> <?php echo $user_data['city']; ?></p>
-        <p style="color: #ccc;"><strong>Address:</strong> <?php echo $user_data['address1']; ?></p>
-        <p style="color: #ccc;"><strong>Car Number:</strong> <?php echo $user_data['carNumber']; ?></p>
+        <p style="color: #ffffff;"><strong>Name:</strong> <?php echo $user_data['name']; ?></p>
+        <p style="color: #ffffff;"><strong>Email:</strong> <?php echo $user_data['email']; ?></p>
+        <p style="color: #ffffff;"><strong>Username:</strong> <?php echo $user_data['username']; ?></p>
+        <p style="color: #ffffff;"><strong>Phone No:</strong> <?php echo $user_data['phoneNo']; ?></p>
+        <p style="color: #ffffff;"><strong>State:</strong> <?php echo $user_data['state']; ?></p>
+        <p style="color: #ffffff;"><strong>City:</strong> <?php echo $user_data['city']; ?></p>
+        <p style="color: #ffffff;"><strong>Address:</strong> <?php echo $user_data['address1']; ?></p>
+        <p style="color: #ffffff;"><strong>Car Number:</strong> <?php echo $user_data['carNumber']; ?></p>
       </div>
       <div id="panelContentHistory" class="panel-tab">
         <?php echo $booking_history_html; ?>
       </div>
       <div id="panelContentSettings" class="panel-tab">
-        <p style="color: #ccc;">(Customize your experience...)</p>
+        <p style="color: #ffffff;">(Customize your experience...)</p>
         <a href="edit_profile.php" style="
         display: inline-block;
         margin: 150px 182px 0px 0px;
