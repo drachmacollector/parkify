@@ -1,8 +1,9 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "parkify";
+$host = "sql105.infinityfree.com";
+$user = "if0_39017725";
+$pass = "jeZyqYSlUAhhmM"; // Use your InfinityFree account password
+$db   = "if0_39017725_parkify_db";
+
 
 // Connect to DB
 $conn = new mysqli($host, $user, $pass, $db);

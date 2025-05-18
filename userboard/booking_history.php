@@ -1,6 +1,11 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "root", "", "parkify");
+$conn = new mysqli("sql105.infinityfree.com", "if0_39017725", "jeZyqYSlUAhhmM", "if0_39017725_parkify_db");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 
 if ($conn->connect_error) {
     echo "<p style='color: red;'>Database connection failed: " . $conn->connect_error . "</p>";

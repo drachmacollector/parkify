@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "parkify");
+$mysqli = new mysqli("sql105.infinityfree.com", "if0_39017725", "jeZyqYSlUAhhmM", "if0_39017725_parkify_db");
 
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
@@ -7,6 +7,7 @@ if ($mysqli->connect_error) {
 
 $result = $mysqli->query("SELECT * FROM user_form");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

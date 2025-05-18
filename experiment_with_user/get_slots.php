@@ -1,5 +1,10 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "parkify");
+$conn = new mysqli("sql105.infinityfree.com", "if0_39017725", "jeZyqYSlUAhhmM", "if0_39017725_parkify_db");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 $area_id = $_GET['area_id'];
 $date = $_GET['date'];
 

@@ -11,10 +11,12 @@ if (!isset($_SESSION['username'])) {
 $username = $_SESSION['username'];
 
 // Connect to database
-$conn = new mysqli("localhost", "root", "", "parkify");
+$conn = new mysqli("sql105.infinityfree.com", "if0_39017725", "jeZyqYSlUAhhmM", "if0_39017725_parkify_db");
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
 $area_id = $_POST['area_id'] ?? $_GET['area_id'] ?? null;
 $slot = $_POST['slot'] ?? $_GET['slot'] ?? null;
 $date = $_POST['date'] ?? $_GET['date'] ?? null;

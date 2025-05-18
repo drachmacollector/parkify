@@ -1,5 +1,6 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "parkify");
+$mysqli = new mysqli("sql105.infinityfree.com", "if0_39017725", "jeZyqYSlUAhhmM", "if0_39017725_parkify_db");
+
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
@@ -48,6 +49,7 @@ if (!empty($params)) {
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
