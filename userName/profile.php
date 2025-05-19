@@ -18,10 +18,10 @@ $user = $result->fetch_assoc();
     body {
       margin: 0;
       padding: 0;
-      background: url('bg.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Segoe UI', sans-serif;
       color: #fff;
+      background-color: black;
     }
 
     .container {
