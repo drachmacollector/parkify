@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Parkify | User Registration</title>
+  <title>Parkify - User Registration</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="userName.css" />
+          <link rel="shortcut icon" href="../registration/car.ico" type="image/x-icon">
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -51,12 +53,12 @@
       </div>
 
       <div class="form-group">
-        <label>Address 1</label>
+        <label>Address 1 (optional)</label>
         <input type="text" name="address1">
       </div>
 
       <div class="form-group">
-        <label>Address 2</label>
+        <label>Address 2 (optional)</label>
         <input type="text" name="address2">
       </div>
 
@@ -66,27 +68,27 @@
       </div>
 
       <div class="form-group">
-        <label>Aadhar Number</label>
+        <label>Aadhar Number (optional)</label>
         <input type="text" name="aadharNumber">
       </div>
 
       <div class="form-group">
-        <label>Insert Aadhar Card</label>
+        <label>Insert Aadhar Card (optional)</label>
         <input type="file" name="aadharFile">
       </div>
 
       <div class="form-group">
-        <label>Car Number</label>
+        <label>Car Number (optional)</label>
         <input type="text" name="carNumber">
       </div>
 
       <div class="form-group">
-        <label>Driving Licence Number</label>
+        <label>Driving Licence Number (optional)</label>
         <input type="text" name="dlNumber">
       </div>
 
       <div class="form-group">
-        <label>Driving Licence Picture</label>
+        <label>Driving Licence Picture (optional)</label>
         <input type="file" name="dlFile">
       </div>
 

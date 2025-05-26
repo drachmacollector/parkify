@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Parkify Login</title>
+  <title>Parkify</title>
   <link rel="stylesheet" href="reg.css" />
   <link
     rel="stylesheet"
@@ -13,6 +13,8 @@
     referrerpolicy="no-referrer"
   />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Michroma&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+      <link rel="shortcut icon" href="car.ico" type="image/x-icon">
+
 </head>
 <body>
 
@@ -54,7 +56,6 @@
         
         <button id="submit" class="cyber-button">
           <span class="cyber-button-text">SUBMIT</span>
-          <span class="cyber-button-glitch"></span>
         </button>
       </div>
       
